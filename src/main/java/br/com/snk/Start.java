@@ -39,7 +39,7 @@ public class Start {
      */
     private static StartParameters loadParametersFromCommandLine(String[] args) {
         StartParameters parameters = new StartParameters();
-        JCommander jCommander = new JCommander(parameters, args);
+        new JCommander(parameters, args);
         return parameters;        
     }
     
