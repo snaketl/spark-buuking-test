@@ -7,5 +7,4 @@ before_install:
   - sudo sh jpmInstall.sh
   - sudo jpm install com.codacy:codacy-coverage-reporter:assembly
 after_success:
-  - sudo cat target/site/jacoco/jacoco.xml
-  - sudo codacy-coverage-reporter -l Java -r target/site/jacoco/jacoco.xml --debug
+  - sudo codacy-coverage-reporter -l Java -r target/site/jacoco-ut/jacoco.xml --debug
