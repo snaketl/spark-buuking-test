@@ -7,7 +7,7 @@ import com.beust.jcommander.Parameter;
  *
  * @author SnK
  */
-public class StartParameters {
+public class StartParameters implements br.com.snk.Parameter {
     
     @Parameter(names = {"--port", "-p"}, description = "HTTP port number" )
     private int port = 8080;

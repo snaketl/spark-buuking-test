@@ -1,6 +1,5 @@
 package br.com.snk;
 
-import com.beust.jcommander.JCommander;
 import static spark.Spark.*;
 
 /**
@@ -38,9 +37,8 @@ public class Start {
      * @return StartParameters
      */
     private static StartParameters loadParametersFromCommandLine(String[] args) {
-        StartParameters parameters = new StartParameters();
-        new JCommander(parameters, args);
-        return parameters;        
+        JCommanderLoadParameters loadParameters = new JCommanderLoadParameters();
+        return (StartParameters) loadParameters.load(new StartParameters(), args);
     }
     
 }
